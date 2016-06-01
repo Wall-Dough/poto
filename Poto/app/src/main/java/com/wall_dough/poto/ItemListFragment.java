@@ -1,22 +1,34 @@
 package com.wall_dough.poto;
 
 import android.app.Fragment;
+import android.app.ListFragment;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.Spinner;
+
+import com.wall_dough.poto.models.items.lists.ListItem;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link ItemListFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
  * Use the {@link ItemListFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ItemListFragment extends Fragment {
+public class ItemListFragment extends ListFragment {
+
+    private static final String TAG = ItemListFragment.class.getSimpleName();
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -25,8 +37,6 @@ public class ItemListFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
-    private OnFragmentInteractionListener mListener;
 
     public ItemListFragment() {
         // Required empty public constructor
@@ -59,49 +69,49 @@ public class ItemListFragment extends Fragment {
         }
     }
 
+
+
+    private ArrayList<ListItem> getItemList() {
+        ArrayList<ListItem> itemList = new ArrayList();
+
+        int numItems = 10;
+        for (int i = 0; i < numItems; i++) {
+            ListItem item = new ListItem();
+            item.setName("Item" + String.valueOf(i));
+            item.setContent("This is item #" + String.valueOf(i));
+            item.setNumRatings(2 * i + 1);
+            item.setRating(5);
+            item.setUserRating(5);
+            itemList.add(item);
+        }
+
+        return itemList;
+
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_item_list, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_item_list, container, false);
+
+        ItemListAdapter adapter = new ItemListAdapter(this.getActivity(), R.layout.generic_list_item, getItemList());
+        setListAdapter(adapter);
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
     }
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
-        mListener = null;
-    }
-
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
-    public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
     }
 }

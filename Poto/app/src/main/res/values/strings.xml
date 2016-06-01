@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">Poto</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="nav_items">
+        <item>Festivals</item>
+        <item>Vendors</item>
+        <item>Food</item>
+        <item>Drinks</item>
+    </string-array>
+
 </resources>
