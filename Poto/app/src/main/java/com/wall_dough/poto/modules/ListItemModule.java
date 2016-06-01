@@ -1,10 +1,10 @@
-package models.modules;
+package com.wall_dough.poto.modules;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-import models.items.lists.ListItem;
+import com.wall_dough.poto.models.items.lists.ListItem;
 
 /**
  * Created by andrew on 5/30/16.

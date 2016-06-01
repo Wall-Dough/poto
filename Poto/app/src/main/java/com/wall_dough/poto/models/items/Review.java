@@ -1,4 +1,4 @@
-package models.items;
+package com.wall_dough.poto.models.items;
 
 /**
  * Created by andrew on 5/30/16.
