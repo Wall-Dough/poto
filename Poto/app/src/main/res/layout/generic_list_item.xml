@@ -9,11 +9,13 @@
         android:layout_height="wrap_content"
         android:text="Name"
         android:id="@+id/item_name"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="@color/headingColor" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Content"
-        android:id="@+id/item_content" />
+        android:id="@+id/item_content"
+        android:textColor="@color/headingColor" />
 </LinearLayout>
