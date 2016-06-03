@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "945694756722",
+    "firebase_url": "https://poto-cdf58.firebaseio.com",
+    "project_id": "poto-cdf58",
+    "storage_bucket": "poto-cdf58.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945694756722:android:b5f65551181d936b",
+        "android_client_info": {
+          "package_name": "com.wall_dough.poto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "945694756722-m2vmqm9bi0rt513vnd4sq2vhjs5pdno3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wall_dough.poto",
+            "certificate_hash": "5A7825730070A20E67C718C7BED48869B2A63DCA"
+          }
+        },
+        {
+          "client_id": "945694756722-h6t23lkjl2l06v2r9satku6rvp6k0fd6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRJFIV5w_3MJ4vLZdteqkdqOU3swbFoIU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "945694756722-h6t23lkjl2l06v2r9satku6rvp6k0fd6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -8,4 +8,5 @@
         <item>Drinks</item>
     </string-array>
 
+    <string name="facebook_application_id" translatable="false">1015818175170601</string>
 </resources>
